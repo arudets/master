@@ -68,4 +68,30 @@ array16 =  array15.filter((elem, i)=> array15.some((el, index) => !(i==index) &&
 // Выбрать уникальные значения
 array16 =  array15.filter((elem, i)=> !array15.some((el, index) => !(i==index) && el.id==elem.id && el.data[0]==elem.data[0] && el.data[1]==elem.data[1]));
 
+// Из массива объектов найти суму элементов у которых id > 5
+array6 = [{id:1}, {id:2}, {id:3}, {id:4}, {id:5}, {id:6}, {id:7}, {id:8}, {id:9}, {id:10}];
+array7 = array6.filter((el) =>el.id>5);
+sum = array7.reduce((sum, current) => sum += current.id, 0);
+
+// Преобразовать объект к нужному виду
+const obj1 = {3: "text 1", 42: "text 42 item", 7: "text 7" };
+
+obj2 = Object.entries(obj3).map(function(el) {return {id: el[0], value: el[1]}} );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
