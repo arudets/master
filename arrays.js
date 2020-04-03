@@ -37,8 +37,35 @@ for(i=0; i< array3.length; i++){
   array5.push(Number(strg))
 }
 
-//
+// Оставить только не унекальные значения
+//  [ {id:1, data:[true, false]},
+//	  {id:1, data:[false, false]},
+//	  {id:1, data:[true, false]},
+//	  {id:1, data:[true, false]},
+//	  {id:2, data:[true, false]}
+//	  ]
+let array15 = [
+      {id:1, data:[true, false]},
+	  {id:1, data:[false, false]},
+	  {id:1, data:[true, false]},
+	  {id:1, data:[true, false]},
+	  {id:2, data:[true, false]}
+	  ]
+   ,array16=[]
+   ;
+for (i=0; i<array15.length; i++){	
+	for(j=0; j<array15.length; j++){		
+		if(array15[i].id==array15[j].id && array15[i].data[0]==array15[j].data[0] && array15[i].data[1]==array15[j].data[1] && !(i==j)){			
+			array16.push(array15[i]);
+			break
+		}
+	}
+}
 
+// Способ 2
+array16 =  array15.filter((elem, i)=> array15.some((el, index) => !(i==index) && el.id==elem.id && el.data[0]==elem.data[0] && el.data[1]==elem.data[1]));
 
+// Выбрать уникальные значения
+array16 =  array15.filter((elem, i)=> !array15.some((el, index) => !(i==index) && el.id==elem.id && el.data[0]==elem.data[0] && el.data[1]==elem.data[1]));
 
 
