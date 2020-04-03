@@ -12,7 +12,7 @@ while(array1.length > 0){
 
 // Способ 2
 
-array1.sort((a, b) => {return (a - b)*Math.round(Math.random()) * 2 - 1}));
+array1.sort((a, b) => {return (a - b)*(Math.round(Math.random()) * 2 - 1)}));
 
 // Имееться массив [9, 8, 7, 6, 5, 4, 3, 2, 1] преобразовать в [999999999, 88888888, 7777777, 666666, 55555, 4444, 333, 22, 1]
 
