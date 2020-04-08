@@ -31,7 +31,7 @@ result = array3.join('');
 
 // Разшифровка
 
-array2.forEach((el) => {
+array2.sort((a, b) =>{return b.value.length - a.value.length}).forEach((el) => {
 	  if(result.includes(el.value)){	  
 	    result = result.split(`${el.value}`).join(`${el.index}`);		
   	}
